@@ -6,23 +6,23 @@
 
 # Download XML from a URL
 download.file("http://schools.nyc.gov/AboutUs/schools/data/attendancexml/",
-              # to a local file.
-              "attendance.xml")
+# to a local file.
+              "today.xml")
 
 # Read the local XML file into R as text.
-attendanceXML <- readLines("attendance.xml")
+todayXML <- readLines("today.xml")
 
 # To deal with XML, load the XML package.
 library("XML")
 
 # Translate from XML format to a tabular data frame
-attendance <- xmlToDataFrame(attendanceXML)
+today <- xmlToDataFrame(todayXML)
 
 # Check the column names.
-names(attendance)
+names(today)
 
 # Make a table of dates.
-table(attendance$ATTN_DATE_YMD)
+table(today$ATTN_DATE_YMD)
 
 
 # Make a table of Boroughs.
@@ -30,22 +30,22 @@ table(attendance$ATTN_DATE_YMD)
 
 
 # Drop a few columns.
-attendance$LOC_CODE <- NULL
-attendance$Borough <- NULL
-attendance$DistrictCode <- NULL
+today$LOC_CODE <- NULL
+today$Borough <- NULL
+today$DistrictCode <- NULL
 
 # Convert strings like "94.32" to numbers like 94.32.
 # Non-numeric strings like "NS" become missing values.
-attendance$ATTN_PCT <- as.numeric(as.character(attendance$ATTN_PCT))
+today$ATTN_PCT <- as.numeric(as.character(today$ATTN_PCT))
 
 # Make a histogram of attendance percentages.
-hist(attendance$percent)
+hist(today$ATTN_PCT)
 
 # Make a boxplot of attendance percentages.
-boxplot(attendance$ATTN_PCT)
+boxplot(today$ATTN_PCT)
 
 # What are the schools with the lowest attendance?
-head(attendance[order(attendance$ATTN_PCT), ])
+head(today[order(today$ATTN_PCT), ])
 
 # What is the citywide attendance percentage?
-subset(attendance, DBN=="TOTAL")
+subset(today, DBN=="TOTAL")
