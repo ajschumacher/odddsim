@@ -42,7 +42,7 @@ attendance$ATTN_PCT <- as.numeric(as.character(attendance$ATTN_PCT))
 hist(attendance$percent)
 
 # Make a boxplot of attendance percentages.
-boxplot(attendance$percent)
+boxplot(attendance$ATTN_PCT)
 
 # What are the schools with the lowest attendance?
 head(attendance[order(attendance$ATTN_PCT), ])
