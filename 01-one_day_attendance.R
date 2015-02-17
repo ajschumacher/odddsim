@@ -9,8 +9,8 @@ download.file("http://schools.nyc.gov/AboutUs/schools/data/attendancexml/",
 # to a local file.
               "today.xml")
 
-# Read the local XML file into R as text.
-todayXML <- readLines("today.xml")
+# Read a local XML file into R as text.
+todayXML <- readLines("20150213.xml")
 
 # To deal with XML, load the XML package.
 library("XML")
