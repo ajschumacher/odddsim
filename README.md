@@ -1,5 +1,4 @@
-###  DC Open Data Day 2015
-### Data Science isn't Magic
+###  DC Open Data Day 2015: Data Science isn't Magic
 
 Materials for [DC Open Data Day](http://dc.opendataday.org/) 2015 workshop “[Data Science isn't Magic](http://planspace.org/20150220-data_science_isnt_magic/).”
 
