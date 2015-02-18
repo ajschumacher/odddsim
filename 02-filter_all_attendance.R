@@ -8,6 +8,7 @@ all_attendance <- read.csv("data/all_attendance.csv")
 all_attendance$ATTN_PCT <- as.numeric(as.character(all_attendance$ATTN_PCT))
 
 # For nice relational-esque data manipulation, load the dplyr package.
+# If the package isn't installed, first run `install.packages("dplyr")`
 library("dplyr")
 
 # Extract the total percentages and number of entries for each day.

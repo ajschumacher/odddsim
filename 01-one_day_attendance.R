@@ -13,6 +13,7 @@ download.file("http://schools.nyc.gov/AboutUs/schools/data/attendancexml/",
 dayXML <- readLines("data/20150213.xml")
 
 # To deal with XML, load the XML package.
+# If the package isn't installed, first run `install.packages("XML")`
 library("XML")
 
 # Translate from XML format to a tabular data frame
