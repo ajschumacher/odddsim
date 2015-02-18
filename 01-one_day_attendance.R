@@ -29,10 +29,6 @@ table(day$ATTN_DATE_YMD)
 ##### YOUR CODE HERE ######
 
 
-# Drop a few columns.
-day$LOC_CODE <- NULL
-day$Borough <- NULL
-day$DistrictCode <- NULL
 
 # Convert strings like "94.32" to numbers like 94.32.
 # Non-numeric strings like "NS" become missing values.
