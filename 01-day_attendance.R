@@ -47,7 +47,7 @@ hist(day$ATTN_PCT)
 boxplot(day$ATTN_PCT)
 
 # What are the schools with the lowest attendance?
-head(today[order(day$ATTN_PCT), ])
+head(day[order(day$ATTN_PCT), ])
 
 # What is the citywide attendance percentage?
 subset(day, DBN=="TOTAL")
