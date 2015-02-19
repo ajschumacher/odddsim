@@ -11,3 +11,6 @@ attd_temp <- merge(attendance,
 
 # Write out data to a file.
 write.csv(attd_temp, "data/attd_temp.csv", row.names=FALSE)
+
+# Look at relationship between temperature and attendance.
+plot(ATTN_PCT ~ TEMP, data=attd_temp, pch=19, cex=0.5)
