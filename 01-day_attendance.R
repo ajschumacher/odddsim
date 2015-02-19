@@ -1,8 +1,13 @@
 # A repeatable investigation into the day's NYC public school attendance
 
+
 # (To run R code in RStudio,
 #  highlight what you want to run and
 #  press Control-Enter.)
+
+# Try running this code:
+print("Hello, data friend!")
+
 
 # Download XML from a URL
 download.file("http://schools.nyc.gov/AboutUs/schools/data/attendancexml/",
